@@ -1,0 +1,184 @@
+
+@section styles{ <% htmlWebpackPlugin.files.css.forEach(function(file) { %>
+<link
+  href="<%= file %><%= htmlWebpackPlugin.options.templateParameters.query %>"
+  rel="preload"
+  as="style"
+/>
+<% }) %> }
+
+<div id="app"></div>
+
+<svg
+  class="svg-wrapper"
+  aria-hidden="true"
+  style="position: absolute; width: 0; height: 0; overflow: hidden; left: -100px; bottom: -100px;"
+>
+  <defs>
+    <symbol id="icon-scanner" viewBox="0 0 32 32">
+      <title>scaner</title>
+      <path
+        fill="#0084b8"
+        style="fill: var(--color1, #0084b8)"
+        d="M12.387 10.839v3.097c0 0.286 0.231 0.516 0.516 0.516h3.097c0.285 0 0.516-0.231 0.516-0.516v-3.097c0-0.286-0.231-0.516-0.516-0.516h-3.097c-0.285 0-0.516 0.231-0.516 0.516zM13.419 11.355h2.064v2.064h-2.064v-2.064z"
+      ></path>
+      <path
+        fill="#0084b8"
+        style="fill: var(--color1, #0084b8)"
+        d="M23.742 10.839c0-0.286-0.231-0.516-0.516-0.516h-3.097c-0.285 0-0.516 0.231-0.516 0.516v3.097c0 0.286 0.231 0.516 0.516 0.516h3.097c0.285 0 0.516-0.231 0.516-0.516v-3.097zM22.71 13.419h-2.064v-2.064h2.064v2.064z"
+      ></path>
+      <path
+        fill="#0084b8"
+        style="fill: var(--color1, #0084b8)"
+        d="M16.516 21.161v-3.097c0-0.286-0.231-0.516-0.516-0.516h-3.097c-0.285 0-0.516 0.231-0.516 0.516v3.097c0 0.286 0.231 0.516 0.516 0.516h3.097c0.285 0 0.516-0.231 0.516-0.516zM15.484 20.645h-2.065v-2.064h2.064v2.064z"
+      ></path>
+      <path
+        fill="#0084b8"
+        style="fill: var(--color1, #0084b8)"
+        d="M23.742 15.484h-5.161v-5.161h-1.032v5.161h-5.161v1.032h5.161v5.161h1.032v-5.161h5.161v-1.032z"
+      ></path>
+      <path
+        fill="#0084b8"
+        style="fill: var(--color1, #0084b8)"
+        d="M23.742 17.548h-3.613c-0.285 0-0.516 0.231-0.516 0.516v3.613h1.032v-3.097h3.097v-1.032z"
+      ></path>
+      <path
+        fill="#0084b8"
+        style="fill: var(--color1, #0084b8)"
+        d="M21.677 19.097h1.032v2.581h-1.032v-2.581z"
+      ></path>
+      <path
+        fill="#0084b8"
+        style="fill: var(--color1, #0084b8)"
+        d="M25.806 12.387v-3.613c0-0.286-0.231-0.516-0.516-0.516h-1.548v-5.677c0-1.423-1.158-2.581-2.581-2.581h-12.387c-1.423 0-2.581 1.158-2.581 2.581v26.839c0 1.423 1.158 2.581 2.581 2.581h12.387c1.423 0 2.581-1.158 2.581-2.581v-5.677h1.548c0.285 0 0.516-0.231 0.516-0.516v-3.613h-1.032v3.097h-3.097v1.032h1.032v5.677c0 0.854-0.695 1.548-1.548 1.548h-0.516v-0.516c0-0.854-0.695-1.548-1.548-1.548h-8.258c-0.854 0-1.548 0.695-1.548 1.548v0.516h-0.516c-0.854 0-1.548-0.695-1.548-1.548v-26.839c0-0.639 0.389-1.188 0.943-1.424l2.822 2.822c0.097 0.097 0.228 0.151 0.365 0.151h7.226c0.137 0 0.268-0.054 0.365-0.151l2.822-2.822c0.553 0.236 0.943 0.786 0.943 1.424v5.677h-1.032v1.032h3.097v3.097h1.032zM10.323 30.452c0-0.285 0.232-0.516 0.516-0.516h8.258c0.284 0 0.516 0.231 0.516 0.516v0.516h-9.29v-0.516zM18.367 3.097h-6.798l-2.064-2.065h10.927l-2.064 2.065z"
+      ></path>
+      <path
+        fill="#0084b8"
+        style="fill: var(--color1, #0084b8)"
+        d="M10.323 8.774v3.613h1.032v-3.097h3.097v-1.032h-3.613c-0.285 0-0.516 0.231-0.516 0.516z"
+      ></path>
+      <path
+        fill="#0084b8"
+        style="fill: var(--color1, #0084b8)"
+        d="M10.323 23.226c0 0.286 0.231 0.516 0.516 0.516h3.613v-1.032h-3.097v-3.097h-1.032v3.613z"
+      ></path>
+    </symbol>
+
+    <symbol id="icon-list" viewBox="0 0 32 32">
+      <title>list</title>
+      <path
+        fill="none"
+        stroke="#ff5722"
+        style="stroke: var(--color2, #ff5722)"
+        stroke-linejoin="round"
+        stroke-linecap="butt"
+        stroke-miterlimit="4"
+        stroke-width="1.0909"
+        d="M17.713 29.904h-12.753v-25.177h6.313"
+      ></path>
+      <path
+        fill="none"
+        stroke="#ff5722"
+        style="stroke: var(--color2, #ff5722)"
+        stroke-linejoin="miter"
+        stroke-linecap="butt"
+        stroke-miterlimit="4"
+        stroke-width="1.0909"
+        d="M8.082 11.49h13.673"
+      ></path>
+      <path
+        fill="none"
+        stroke="#ff5722"
+        style="stroke: var(--color2, #ff5722)"
+        stroke-linejoin="miter"
+        stroke-linecap="butt"
+        stroke-miterlimit="4"
+        stroke-width="1.0909"
+        d="M8.082 15.273h13.673"
+      ></path>
+      <path
+        fill="none"
+        stroke="#ff5722"
+        style="stroke: var(--color2, #ff5722)"
+        stroke-linejoin="miter"
+        stroke-linecap="butt"
+        stroke-miterlimit="4"
+        stroke-width="1.0909"
+        d="M8.082 19.273h10.847"
+      ></path>
+      <path
+        fill="none"
+        stroke="#ff5722"
+        style="stroke: var(--color2, #ff5722)"
+        stroke-linejoin="miter"
+        stroke-linecap="butt"
+        stroke-miterlimit="4"
+        stroke-width="1.0909"
+        d="M8.082 23.273h8.48"
+      ></path>
+      <path
+        fill="none"
+        stroke="#ff5722"
+        style="stroke: var(--color2, #ff5722)"
+        stroke-linejoin="round"
+        stroke-linecap="butt"
+        stroke-miterlimit="4"
+        stroke-width="1.0909"
+        d="M19.091 4.727h5.886v12.786"
+      ></path>
+      <path
+        fill="none"
+        stroke="#ff5722"
+        style="stroke: var(--color2, #ff5722)"
+        stroke-linejoin="miter"
+        stroke-linecap="butt"
+        stroke-miterlimit="4"
+        stroke-width="2.1818"
+        d="M10.909 3.010h8.016c0.201 0 0.364 0.163 0.364 0.364v2.954c0 0.201-0.163 0.364-0.364 0.364h-8.016c-0.201 0-0.364-0.163-0.364-0.364v-2.954c0-0.201 0.163-0.364 0.364-0.364z"
+      ></path>
+      <path
+        fill="none"
+        stroke="#ff5722"
+        style="stroke: var(--color2, #ff5722)"
+        stroke-linejoin="miter"
+        stroke-linecap="butt"
+        stroke-miterlimit="4"
+        stroke-width="1.0909"
+        d="M30.282 26.051c0 2.984-2.419 5.404-5.404 5.404s-5.404-2.419-5.404-5.404c0-2.984 2.419-5.404 5.404-5.404s5.404 2.419 5.404 5.404z"
+      ></path>
+      <path
+        fill="none"
+        stroke="#ff5722"
+        style="stroke: var(--color2, #ff5722)"
+        stroke-linejoin="miter"
+        stroke-linecap="butt"
+        stroke-miterlimit="4"
+        stroke-width="1.0909"
+        d="M17.448 3.010c0-1.307-1.074-2.367-2.399-2.367s-2.399 1.060-2.399 2.367"
+      ></path>
+      <path
+        fill="none"
+        stroke="#ff5722"
+        style="stroke: var(--color2, #ff5722)"
+        stroke-linejoin="miter"
+        stroke-linecap="butt"
+        stroke-miterlimit="4"
+        stroke-width="1.0909"
+        d="M21.455 26.135l2.418 2.228 4.491-4"
+      ></path>
+    </symbol>
+
+    <symbol id="icon-down-arr" viewBox="0 0 64 32">
+      <title>down-arr</title>
+      <path
+        fill="#0084b8"
+        style="fill: var(--color1, #0084b8)"
+        d="M0 0l32 32 32-32h-64z"
+      ></path>
+    </symbol>
+  </defs>
+</svg>
+
+@section scripts{ <% htmlWebpackPlugin.files.js.forEach(function(file) { %>
+<script src="<%= file %><%= htmlWebpackPlugin.options.templateParameters.query %>"></script>
+<% }) %> }
